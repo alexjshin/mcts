@@ -1,1 +1,1 @@
-# mcts
+# Explicit Monte Carlo Search Tree
