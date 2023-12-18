@@ -1,0 +1,9 @@
+ESTIMATE of time to complete assignment: 8 hours
+
+TOTAL time spent to complete assignment: 15 hours
+
+People I discussed with: None
+
+DISCUSSION
+
+I first debated whether to begin with an implicit or explicit implementation. It was mentioned in lecture that an explicit representation may perform better, albeit harder to implement. However, it felt more intuitive to implement an explicit tree representation. Constructing a very basic MCTS was not super difficult, as there was a lot of support in lecture as well as online. I initially tested this very basic implementation and performed very well for pegging but not for kalah. I then experimented with gradually expanding my tree so that in my function “expand_node” a single action is randomly selected from the set of untried action, and only one child node is added at a time (before I had added all the child nodes, which proved to be insufficient). After doing this my implementation performed drastically better. I then added a dictionary (“state_dict”), keeping track of all the visited states, so that when a visited node is visited by a different parent, the visited node is accessed. Although I did not see drastic changes after implementing this functionality (because of the high variance in the tests), intuitively it made more sense to keep in as a lot of the node characteristics would have already been computed. Other than this, testing my implementation took a very long time and was the most tedious aspect of the problem set. 
